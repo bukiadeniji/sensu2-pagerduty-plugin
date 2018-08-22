@@ -44,9 +44,10 @@ patch -b < pd-sensu.patch
 ```
 
 5. Verify your configuration
+
 `pd-send -k <your_integration_key> -t trigger -d "Test test" -i server.test`
 
-6 Create Sensu Pagerduty handler and complete your setup
+6. Create Sensu Pagerduty handler and complete your setup
 ```
 sensuctl handler create pagerduty --type pipe --command "/usr/share/pdagent-integrations/bin/pd-sensu -k <your_integration_key>" --timeout 20 --environment default --organization default
 ```
