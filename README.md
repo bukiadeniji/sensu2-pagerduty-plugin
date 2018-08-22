@@ -1,2 +1,2 @@
 # sensu2-pagerduty-plugin
-Pagerduty plugin for Sensu2
+Patch for Pagerduty plugin - pd-sensu to make it compatible with Sensu2 (beta), as a handler
