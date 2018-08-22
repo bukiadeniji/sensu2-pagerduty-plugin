@@ -1,0 +1,25 @@
+--- pd-sensu    2018-08-22 09:57:33.009429118 -0700
++++ pd-sensu2   2018-08-22 10:00:27.863284529 -0700
+@@ -73,8 +73,8 @@
+             raise e
+         self._details = details
+         # Normalize the event type
+-        action = details['action']
+-        event_types = {'resolve':'resolve', 'create':'trigger'}
++        action = details['check']['state']
++        event_types = {'passing':'resolve', 'failing':'trigger'}
+         if action in event_types:
+             self._event_type = event_types[action]
+         else:
+@@ -82,9 +82,9 @@
+         # Set the incident key
+         if given_incident_key is not None:
+             self._incident_key = given_incident_key
+-        elif 'client' in details and 'check' in details:
++        elif 'entity' in details and 'check' in details:
+             self._incident_key = '%s/%s'%(
+-                details['client']['name'],
++                details['entity']['id'],
+                 details['check']['name']
+             )
+         else:
