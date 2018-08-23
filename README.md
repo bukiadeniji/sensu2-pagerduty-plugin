@@ -15,7 +15,8 @@ The following steps are for Centos 7. However, it can be easily adapted to other
 
 1.  Install Pagerduty Repo
 	
-  ```sudo sh -c 'cat >/etc/yum.repos.d/pdagent.repo <<EOF
+  ```
+  sudo sh -c 'cat >/etc/yum.repos.d/pdagent.repo <<EOF
 	[pdagent]
 	name=PDAgent
 	baseurl=https://packages.pagerduty.com/pdagent/rpm
@@ -31,7 +32,8 @@ The following steps are for Centos 7. However, it can be easily adapted to other
 
 3.  Download this patch  to your host
 
-```cd /usr/share/pdagent-integrations/bin/pd-sensu
+```
+cd /usr/share/pdagent-integrations/bin/pd-sensu
 git clone https://github.com/bukiadeniji/sensu2-pagerduty-plugin/
 ```
 
