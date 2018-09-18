@@ -1,9 +1,9 @@
 # sensu2-pagerduty-plugin
-How to patch the Pagerduty plugin to be compatible with Sensu2 (beta)
+This is a quick tutorial on how to patch the Pagerduty plugin to be compatible with Sensu2 (beta).
 
-The following instructions will guide you to install the available Pagerduty plugin and apply this patch to make it compatible with Sensu2 (beta)
+The steps will guide you through installing the available Pagerduty plugin and applying this patch to make it compatible with Sensu2 (beta)
 
-For details about the requirements of Pagerduty, setting up a service and more info about the plugins, please refer to https://www.pagerduty.com/docs/guides/agent-install-guide/
+For details about the requirements of Pagerduty, setting up a service and other info about the plugin, please refer to https://www.pagerduty.com/docs/guides/agent-install-guide/
 
 # Assumptions
 1. You already have a Pagerduty account. Signup for one if you dont.
@@ -11,7 +11,9 @@ For details about the requirements of Pagerduty, setting up a service and more i
 3. You know how to create sensu handlers
 
 # Installation
-The following steps are for Centos 7. However, it can be easily adapted to other OS
+The following steps were written and tested on Centos 7. However, it can be easily adapted to other OS.
+
+Log on to your Sensu Server, and execute the following.
 
 1.  Install Pagerduty Repo
 	
@@ -30,7 +32,7 @@ The following steps are for Centos 7. However, it can be easily adapted to other
 
 `sudo yum install --enablerepo=pdagent pdagent pdagent-integrations`
 
-3.  Download this patch  to your host
+3.  Download this patch to your Sensu2 server host
 
 ```
 cd /usr/share/pdagent-integrations/bin/pd-sensu
