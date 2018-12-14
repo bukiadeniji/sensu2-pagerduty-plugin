@@ -42,7 +42,7 @@ git clone https://github.com/bukiadeniji/sensu2-pagerduty-plugin/
 4.  Patch the pd-sensu plugin, by applying the pd-sensu.patch file
 
 ```
-cd /usr/share/pdagent-integrations/bin/pd-sensu
+cd /usr/share/pdagent-integrations/bin
 cp sensu2-pagerduty-plugin/pd-sensu.patch .
 patch -b < pd-sensu.patch
 ```
