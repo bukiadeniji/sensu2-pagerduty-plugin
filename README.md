@@ -18,7 +18,7 @@ Log on to your Sensu Server, and execute the following.
 1.  Install Pagerduty Repo
 	
   ```
-  sudo sh -c 'cat >/etc/yum.repos.d/pdagent.repo <<EOF
+  sh -c 'cat >/etc/yum.repos.d/pdagent.repo <<EOF
 	[pdagent]
 	name=PDAgent
 	baseurl=https://packages.pagerduty.com/pdagent/rpm
@@ -30,7 +30,7 @@ Log on to your Sensu Server, and execute the following.
   
 2.  Install the PD agent package
 
-`sudo yum install --enablerepo=pdagent pdagent pdagent-integrations`
+`yum install --enablerepo=pdagent pdagent pdagent-integrations`
 
 3.  Download this patch to your Sensu2 server host
 
