@@ -35,7 +35,7 @@ Log on to your Sensu Server, and execute the following.
 3.  Download this patch to your Sensu2 server host
 
 ```
-cd /usr/share/pdagent-integrations/bin/pd-sensu
+cd /usr/share/pdagent-integrations/bin/
 git clone https://github.com/bukiadeniji/sensu2-pagerduty-plugin/
 ```
 
